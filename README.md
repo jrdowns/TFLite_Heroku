@@ -2,8 +2,8 @@
 Deploy a TensorFlow Lite model to Heroku
 
 - [Overview](#overview)
-- [Importing Model](#importing-model)
-- [Saving Model](#saving-model)
+- [Import Model](#import-model)
+- [Save Model](#save-model)
 - [Convert to TFLite](#convert-to-tflite)
 - [Create Flask App](#creat-flask-app)
 - [Integrate Github](#integrate-github)
@@ -21,3 +21,10 @@ In this project we will:
 5) Integrate Github changes into Heroku
 6) Deploy our model and app to Heroku
 7) Test our model through our new Heroku app
+
+## Import Model
+In this section, we will import a model from TensorFlow Hub
+### TensorFlow Hub
+Link: https://www.tensorflow.org/hub
+Description: TensorFlow Hub is TensorFlow's official repository of pre-trained models.
+You can find 
