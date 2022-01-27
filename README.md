@@ -2,29 +2,39 @@
 Deploy a TensorFlow Lite model to Heroku
 
 - [Overview](#overview)
-- [Import Model](#import-model)
-- [Save Model](#save-model)
-- [Convert to TFLite](#convert-to-tflite)
-- [Create Flask App](#creat-flask-app)
-- [Integrate Github](#integrate-github)
+- [Create Flask App](#create-flask-app)
+- [Deploy To Heroku](#deploy-to-heroku)
 - [Test](#test)
+- [Links](#links)
 
 ## Overview
 Author: James Downs
 Date: 1/21/2022
 
 In this project we will:
-1) Import a model from TensorFlow Hub
-2) Save the model in the `SavedModel` format
-3) Conver the model to a TensorFlow Lite model
-4) Create a basic Flask app to prove a GUI for our model
-5) Integrate Github changes into Heroku
-6) Deploy our model and app to Heroku
-7) Test our model through our new Heroku app
+1) Create a basic Flask app to prove a GUI for our model
+2) Integrate Github changes into Heroku
+3) Deploy our model and app to Heroku
+4) Test our model through our new Heroku app
 
-## Import Model
-In this section, we will import a model from TensorFlow Hub
-### TensorFlow Hub
+### Using A Pretrained Model
 Link: https://www.tensorflow.org/hub
 Description: TensorFlow Hub is TensorFlow's official repository of pre-trained models.
-You can find 
+
+### TensorFlow vs TensorFlow Lite
+
+### TensorFlow.js
+
+## Create Flask App
+
+## Deploy To Heroku
+
+### Integrating GitHub
+
+## Test
+
+## Links
+- TensorFlow.js: https://www.tensorflow.org/js
+- TFLite Movie Review Model: https://www.tensorflow.org/lite/examples/text_classification/overview
+- Flask Quickstart Guide: https://flask.palletsprojects.com/en/2.0.x/quickstart/
+- Heroku App: https://tfjs-tflite-demo.herokuapp.com/
