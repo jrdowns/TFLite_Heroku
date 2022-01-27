@@ -18,12 +18,21 @@ In this project we will:
 4) Test our model through our new Heroku app
 
 ### Using A Pretrained Model
-Link: https://www.tensorflow.org/hub
-Description: TensorFlow Hub is TensorFlow's official repository of pre-trained models.
+Building your own machine learning model can be tricky and time consuming. Luckily, TensorFlow has several pre-trained models you can use to get your project up and running quicker.
+TensorFlow Hub serves as a repository of pre-trained models for issues such as natural language processing, image classification, object detection, etc. 
+It also includes helpful tutorials on how to import and fine-tune those models.
 
-### TensorFlow vs TensorFlow Lite
+We'll be using the TFLite model for movie review sentiment analysis: https://www.tensorflow.org/lite/examples/text_classification/overview
+
+### What Is TensorFlow Lite?
+Machine learning models can be fairly resource intensive in their execution, which limits their use on mobile and IoT devices. TensorFlow Lite aims to solve that problem by creating more resource efficient models.
+
+https://www.tensorflow.org/lite
 
 ### TensorFlow.js
+TensorFlow.js is a library for machine learning in JavaScript. It enables the deployment of machine learning models directly in the browser or in Node.js.
+
+https://www.tensorflow.org/js
 
 ## Create Flask App
 
@@ -34,6 +43,7 @@ Description: TensorFlow Hub is TensorFlow's official repository of pre-trained m
 ## Test
 
 ## Links
+- TensorFlow Lite: https://www.tensorflow.org/lite
 - TensorFlow.js: https://www.tensorflow.org/js
 - TFLite Movie Review Model: https://www.tensorflow.org/lite/examples/text_classification/overview
 - Flask Quickstart Guide: https://flask.palletsprojects.com/en/2.0.x/quickstart/
