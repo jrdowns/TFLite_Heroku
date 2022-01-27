@@ -8,13 +8,13 @@ Deploy a TensorFlow Lite model to Heroku
 - [Links](#links)
 
 ## Overview
-Author: James Downs
-Date: 1/21/2022
-Model: https://www.tensorflow.org/lite/examples/text_classification/overview
-App: https://tfjs-tflite-demo.herokuapp.com/
+Author: James Downs  
+Date: 1/21/2022  
+Model: https://www.tensorflow.org/lite/examples/text_classification/overview  
+App: https://tfjs-tflite-demo.herokuapp.com/  
 
 In this project we will:
-1) Create a basic Flask app to prove a GUI for our model
+1) Create a basic Flask app to provide a GUI for our model
 2) Integrate Github changes into Heroku
 3) Deploy our model and app to Heroku
 4) Test our model through our new Heroku app
@@ -27,7 +27,8 @@ It also includes helpful tutorials on how to import and fine-tune those models.
 ### What Is TensorFlow Lite?
 Machine learning models can be fairly resource intensive in their execution, which limits their use on mobile and IoT devices. TensorFlow Lite aims to solve that problem by creating more resource efficient models.
 
-We'll be using the TFLite model to moview review sentiment analysis: https://www.tensorflow.org/lite/examples/text_classification/overview
+We'll be using the TFLite model for moview review sentiment analysis:  
+https://www.tensorflow.org/lite/examples/text_classification/overview
 
 ### TensorFlow.js
 TensorFlow.js is a library for machine learning in JavaScript. It enables the deployment of machine learning models directly in the browser or in Node.js.
