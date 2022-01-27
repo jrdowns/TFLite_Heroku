@@ -8,6 +8,7 @@ Deploy a TensorFlow Lite model to Heroku
 - [Create Flask App](#creat-flask-app)
 - [Integrate Github](#integrate-github)
 - [Test](#test)
+- [Links](#links)
 
 ## Overview
 Author: James Downs
@@ -28,3 +29,8 @@ In this section, we will import a model from TensorFlow Hub
 Link: https://www.tensorflow.org/hub
 Description: TensorFlow Hub is TensorFlow's official repository of pre-trained models.
 You can find 
+
+## Links
+TFLite Movie Review Model: https://www.tensorflow.org/lite/examples/text_classification/overview
+Flask Quickstart Guide: https://flask.palletsprojects.com/en/2.0.x/quickstart/
+Heroku App: https://tfjs-tflite-demo.herokuapp.com/
