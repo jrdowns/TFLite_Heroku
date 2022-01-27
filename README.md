@@ -31,6 +31,7 @@ Description: TensorFlow Hub is TensorFlow's official repository of pre-trained m
 You can find 
 
 ## Links
-TFLite Movie Review Model: https://www.tensorflow.org/lite/examples/text_classification/overview
-Flask Quickstart Guide: https://flask.palletsprojects.com/en/2.0.x/quickstart/
-Heroku App: https://tfjs-tflite-demo.herokuapp.com/
+- TensorFlow.js: https://www.tensorflow.org/js
+- TFLite Movie Review Model: https://www.tensorflow.org/lite/examples/text_classification/overview
+- Flask Quickstart Guide: https://flask.palletsprojects.com/en/2.0.x/quickstart/
+- Heroku App: https://tfjs-tflite-demo.herokuapp.com/
