@@ -179,6 +179,10 @@ if __name__ == "__main__":
     app.run(debug=True)
 ```
 
+### Flask Template Rendering
+To generate HTML from within Python, Flask configures the Jinja2 template engine for you automatically.  
+To render a template you can use the render_template() method. Here we use it to render our `index.html` page.
+
 ### Creating Our Requirements File
 The requirements file will make sure all of the dependencies we need to run our app get automatically installed.  
 ```
@@ -196,10 +200,6 @@ In this case, it's pretty simple:
 ```
 web: gunicorn app:app
 ```
-
-### Flask Template Rendering
-To generate HTML from within Python, Flask configures the Jinja2 template engine for you automatically.  
-To render a template you can use the render_template() method. Here we use it to render our `index.html` page.
 
 ## Deploy To Heroku
 Heroku is a cloud application platform. Depending our your resource needs, you can deploy small applications completely free.  
