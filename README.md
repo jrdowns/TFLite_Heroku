@@ -86,6 +86,83 @@ We have to call them this way because of how Flask works.
 Flask automatically looks for static files within the `static` directory.  
 You use the `url_for` function and `static` designation to generate the URLs for these files.  
 
+### Creating Our CSS File
+Here we'll style our text box, button, and result output:  
+```
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+.textarea-container {
+  display: flex;
+}
+
+textarea {
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  height: 60px;
+  padding: 8px;
+  width: 500px;
+}
+
+.btn {
+  align-items: center;
+  /* background: linear-gradient(90deg, #ff6f00, #ff9100); */
+  background: blue;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  height: 64px;
+  justify-content: cetner;
+  margin-left: 4px;
+  opacity: .9;
+  padding: 2px 18px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.result {
+  margin-top: 6px;
+  color: #888;
+}
+```
+
+### Creating Our JavaScript File
+Here we'll use TensorFlow.js to load our model and use it to make a prediction of whether the movie review is possitive or negative based on the text input:  
+```
+async function start() {
+  const textarea = document.querySelector("textarea");
+  const resultDiv = document.querySelector(".result");
+
+  // Load the TFLite model.
+  const model = await tfTask.NLClassification.CustomModel.TFLite.load({
+    model:
+      "https://storage.googleapis.com/tfweb/models/movie_review_sentiment_classification.tflite"
+  });
+
+  document.querySelector(".btn").addEventListener("click", async () => {
+    // Get the classification result for the entered text
+    const result = await model.predict(textarea.value);
+
+    // Show the results.
+    resultDiv.textContent = result.classes
+      .map((c) => `${c.className}: ${c.score.toFixed(3)}`)
+      .join(", ");
+  });
+}
+
+start();
+```
+It's that easy to load a TFLite model into our web app.
+
 ### Flask Template Rendering
 To generate HTML from within Python, Flask configures the Jinja2 template engine for you automatically.  
 To render a template you can use the render_template() method.  
