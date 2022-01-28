@@ -179,13 +179,43 @@ if __name__ == "__main__":
     app.run(debug=True)
 ```
 
+### Creating Our Requirements File
+The requirements file will make sure all of the dependencies we need to run our app get automatically installed.  
+```
+Flask
+gunicorn==19.9.0
+itsdangerous==1.1.0
+Jinja2==2.10.1
+MarkupSafe==1.1.1
+Werkzeug==0.15.5
+```
+
+### Creating Our Procfile
+Since we're deploying our app to Heroku, we'll need a Procfile to tell Heroku what to do.
+In this case, it's pretty simple:  
+```
+web: gunicorn app:app
+```
+
 ### Flask Template Rendering
 To generate HTML from within Python, Flask configures the Jinja2 template engine for you automatically.  
 To render a template you can use the render_template() method. Here we use it to render our `index.html` page.
 
 ## Deploy To Heroku
+Heroku is a cloud application platform. Depending our your resource needs, you can deploy small applications completely free.  
+So, log into https://dashboard.heroku.com/apps or create an account if you don't have one.  
+
+### Create Our Heroku App
+At the top right of your app dashboard, click `New` then `Create new app`.
+Give your application a name and then click `Create App`.  
+Now, we'll need to add our code to our app...
 
 ### Integrating GitHub
+We can easily push code to our Heroku application be enabling integration with our GitHub account and respository.  
+Under your application's `Deploy` tab, scroll down to `Deployment Method` and select GitHub.  
+All Heroku access to your GitHub, select the repository you've pushed your code to, and enabled automatic deployment.  
+This will allow any code changes you make to the GitHub repo to be automatically pulled into the Heroku app where it will be redeployed.  
+Now click `Deploy Branch` and manually deploy your build for the first time.  
 
 ## Test
 
