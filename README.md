@@ -27,13 +27,25 @@ It also includes helpful tutorials on how to import and fine-tune those models.
 ### What Is TensorFlow Lite?
 Machine learning models can be fairly resource intensive in their execution, which limits their use on mobile and IoT devices. TensorFlow Lite aims to solve that problem by creating more resource efficient models.
 
-We'll be using the TFLite model for moview review sentiment analysis:  
+We'll be using the TFLite model for movie review sentiment analysis:  
 https://www.tensorflow.org/lite/examples/text_classification/overview
 
 ### TensorFlow.js
 TensorFlow.js is a library for machine learning in JavaScript. It enables the deployment of machine learning models directly in the browser or in Node.js.
 
 ## Create Flask App
+We'll be using Flask as our framework to serve up the model. Here's what our file structure will look like:
+
+📦TFLite_Heroku  
+ ┣ 📂static  
+ ┃ ┣ 📜script.js  
+ ┃ ┗ 📜style.css  
+ ┣ 📂templates  
+ ┃ ┗ 📜index.html  
+ ┣ 📜Procfile  
+ ┣ 📜README.md  
+ ┣ 📜app.py  
+ ┗ 📜requirements.txt  
 
 ## Deploy To Heroku
 
