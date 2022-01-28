@@ -163,9 +163,25 @@ start();
 ```
 It's that easy to load a TFLite model into our web app.
 
+### Creating Our App File
+Since we're keeping it simple, all we need to do is tell Flask where to route its root page too.  
+In this case, it's `index.html`.  
+```
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+
 ### Flask Template Rendering
 To generate HTML from within Python, Flask configures the Jinja2 template engine for you automatically.  
-To render a template you can use the render_template() method.  
+To render a template you can use the render_template() method. Here we use it to render our `index.html` page.
 
 ## Deploy To Heroku
 
