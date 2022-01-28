@@ -47,6 +47,49 @@ We'll be using Flask as our framework to serve up the model. Here's what our fil
  ┣ 📜app.py  
  ┗ 📜requirements.txt  
 
+### What Is Flask?
+Flask is a micro web framework. It contains a simple but extensible core.  
+In their words, "...Flask can be everything you need and nothing you don’t."  
+In the spirit of efficiency, which is the point of TFLite, Flask meets our needs quite well.
+
+### Creating Our HTML File
+Our only real goal is to be able to pass some text to our a model and return its evaluation.  
+So, we'll have a text box to accept some input, a button to send the input to our a model, and some text to output the result:  
+```
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>TFLite Movie Review Analysis</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/tasks@0.0.1-alpha.8"></script>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="textarea-container">
+  <textarea placeholder="Enter a movie review"></textarea>
+  <div class="btn">
+    Analyze
+  </div>
+</div>
+<div class="result"></div>
+<!-- partial -->
+  <script src="{{ url_for('static',filename='script.js') }}"> </script>
+
+</body>
+</html>
+```
+
+### Static File Referencing
+You may have noticed how our .css and .js files were referenced in the HTML file.  
+We have to call them this way because of how Flask works.  
+Flask automatically looks for static files within the `static` directory.  
+You use the `url_for` function and `static` designation to generate the URLs for these files.  
+
+### Flask Template Rendering
+To generate HTML from within Python, Flask configures the Jinja2 template engine for you automatically.  
+To render a template you can use the render_template() method.  
+
 ## Deploy To Heroku
 
 ### Integrating GitHub
