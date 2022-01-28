@@ -11,7 +11,6 @@ Deploy a TensorFlow Lite model to Heroku
 Author: James Downs  
 Date: 1/21/2022  
 Model: https://www.tensorflow.org/lite/examples/text_classification/overview  
-App: https://tfjs-tflite-demo.herokuapp.com/  
 
 In this project we will:
 1) Create a basic Flask app to provide a GUI for our model
@@ -218,6 +217,14 @@ This will allow any code changes you make to the GitHub repo to be automatically
 Now click `Deploy Branch` and manually deploy your build for the first time.  
 
 ## Test
+Now that our app is deploy, we should be able to use it.  
+Click the `Open App` button to go to you app's web page.  
+
+You should see a text box to input a movie review and a button to send the review to our model for evaluation.  
+Enter a movie review, click `Analyze`, and voila! We should see our model's classification of wether the review is negative or positive.  
+![image](https://user-images.githubusercontent.com/13874365/151497824-72ad7ebf-ea9b-4cb5-866f-2717f24e52b8.png)
+
+
 
 ## Links
 - TensorFlow Hub: https://www.tensorflow.org/hub
@@ -225,4 +232,4 @@ Now click `Deploy Branch` and manually deploy your build for the first time.
 - TensorFlow.js: https://www.tensorflow.org/js
 - TFLite Movie Review Model: https://www.tensorflow.org/lite/examples/text_classification/overview
 - Flask Quickstart Guide: https://flask.palletsprojects.com/en/2.0.x/quickstart/
-- Heroku App: https://tfjs-tflite-demo.herokuapp.com/
+- Heroku Dashboard: https://dashboard.heroku.com/apps
